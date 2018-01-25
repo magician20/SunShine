@@ -21,8 +21,8 @@ public interface WeatherDao {
     @Query("SELECT * FROM weather WHERE date=:date")
     LiveData<WeatherEntry> getWeatherByDate(Date date);//update the return to wrapped LiveData
 
-    @Query("SELECT * FROM weather WHERE date >= :date")
-    LiveData<List<WeatherEntry>>  getCurrentWeatherForecasts(Date date);
+    @Query("SELECT id, weatherIconId, date, min, max FROM weather WHERE date >= :date")
+    LiveData<List<ListViewWeatherEntry>>  getCurrentWeatherForecasts(Date date);
 
     @Query("SELECT COUNT(id) FROM weather WHERE date >=:date")
     int countAllFutureWeather(Date date);

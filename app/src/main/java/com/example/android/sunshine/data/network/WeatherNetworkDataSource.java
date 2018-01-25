@@ -61,7 +61,7 @@ public class WeatherNetworkDataSource {
     private WeatherNetworkDataSource(Context context, AppExecutors executors) {
         mContext = context;
         mExecutors = executors;
-        mDownloadedWeatherForecasts = new MutableLiveData<WeatherEntry[]>();//
+        mDownloadedWeatherForecasts = new MutableLiveData<>();//
     }
 
     /**
@@ -178,7 +178,6 @@ public class WeatherNetworkDataSource {
                             response.getWeatherForecast()[0].getMin(),
                             response.getWeatherForecast()[0].getMax()));
 
-                    // TODO Finish this method when instructed.
                     // Will eventually do something with the downloaded data
                     mDownloadedWeatherForecasts.postValue(response.getWeatherForecast());
                 }

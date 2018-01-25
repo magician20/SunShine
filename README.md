@@ -1,7 +1,7 @@
 Sunshine with Architecture Components
 ================================
 ## About
-This app is for the [Build an App with Architecture Components Codelab](Todo link).
+This app is for the [Build an App with Architecture Components Codelab](https://codelabs.developers.google.com/codelabs/build-app-with-arch-components/index.html?index=..%2F..%2Findex#0).
 
 ## Starting Classes
 

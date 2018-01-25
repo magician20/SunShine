@@ -24,7 +24,12 @@ public class InjectorUtils {
         return SunshineRepository.getInstance(database.weatherDao(), networkDataSource, executors);
     }
 
+    //Issue with Repository not existing when the app is gone - need to provide
+    //Modify the injector method to make sure repo dependency is there
     public static WeatherNetworkDataSource provideNetworkDataSource(Context context) {
+        // This call to provide repository is necessary if the app starts from a service - in this
+       // case the repository will not exist unless it is specifically created.
+        provideRepository(context.getApplicationContext());
         AppExecutors executors = AppExecutors.getInstance();
         return WeatherNetworkDataSource.getInstance(context.getApplicationContext(), executors);
     }
