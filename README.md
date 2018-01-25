@@ -2,6 +2,7 @@ Sunshine with Architecture Components
 ================================
 ## About
 This app is for the [Build an App with Architecture Components Codelab](https://codelabs.developers.google.com/codelabs/build-app-with-arch-components/index.html?index=..%2F..%2Findex#0).
+This rebuild of Sunshine app of Google Developer Challenge Scholarship by Udacity.
 
 ## Starting Classes
 
